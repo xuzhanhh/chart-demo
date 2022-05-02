@@ -1,0 +1,14 @@
+{
+  "miniprogramRoot": ".bmp/build",
+  "projectname": "mp-playground",
+  "description": "A Binance mini-program project",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.7.0"
+}
