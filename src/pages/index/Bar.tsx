@@ -23,6 +23,12 @@ export default class Bar extends Component {
           },
         },
       ],
+      tooltip: { 
+        trigger: 'axis',
+        formatter: (dates) => {
+          return dates.map(item => `${item.axisValue}: ${item.data}`).join('\n')
+        }
+      }
     };
     this.barChart.refresh(defautOption);
   }
