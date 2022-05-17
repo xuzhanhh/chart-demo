@@ -6,18 +6,31 @@ import { EChart } from "echarts-taro3-react";
 export default class Bar extends Component {
   componentDidMount() {
     const option = {
+      tooltip: {
+        trigger: 'axis',
+        renderMode: 'richText',
+      },
       xAxis: {
         type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        boundaryGap: false,
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        axisLine: { show: false },
+        axisTick: { show: false, alignWidthLabel: true },
       },
       yAxis: {
-        type: 'value'
+        type: 'value',
+        position: 'right',
+        axisLine: { show: false },
+        axisTick: { show: false },
       },
-      series: [{
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line'
-      }]
-    };
+      series: [
+        {
+          data: [820, 932, 901, 934, 1290, 1330, 1320],
+          type: 'line',
+          smooth: true,
+        },
+      ],
+    }
     this.Chart.refresh(option);
   }
 
